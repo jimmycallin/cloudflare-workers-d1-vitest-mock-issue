@@ -1,0 +1,25 @@
+{
+  "name": "mock-issue-demo",
+  "version": "1.0.0",
+  "description": "Demonstrates that vi.mock() doesn't work with SELF.fetch() in Cloudflare Workers",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "hono": "^4.8.12",
+    "jose": "^6.0.12",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.8.59",
+    "@types/node": "latest",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}

@@ -1,0 +1,32 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mock-issue",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-07-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "migrations": [],
+  "routes": [],
+  "dev": {
+    "port": 8080,
+  },
+  "env": {
+    "test": {
+      "vars": {
+        "ENVIRONMENT": "test",
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "test",
+          "database_id": "db-id-test",
+          "migrations_dir": "migrations",
+          "preview_database_id": "local-test-db",
+        },
+      ],
+    },
+  },
+}
